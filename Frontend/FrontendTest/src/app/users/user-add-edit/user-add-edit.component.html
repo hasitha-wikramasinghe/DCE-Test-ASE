@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <h1 mat-dialog-title>{{title}}</h1>
+    <mat-dialog-content>
+      <form [formGroup]="userForm">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field class="mat-form-field-fluid" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" formControlName="Email">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="mat-form-field-fluid" appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="First Name" formControlName="FirstName">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="mat-form-field-fluid" appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Last Name" formControlName="LastName">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="mat-form-field-fluid" appearance="outline">
+              <mat-label>Image URL</mat-label>
+              <input matInput placeholder="Image URL" formControlName="Avatar">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button  cdkFocusInitial color="primary" (click)="save()">Save</button>
+    </mat-dialog-actions>
+  
+  </div>
