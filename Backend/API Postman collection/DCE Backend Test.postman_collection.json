@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "a98028e5-d32e-4608-9170-3ce24ca8e6cb",
+		"name": "DCE Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"James\",\r\n  \"email\": \"james@test.lk\",\r\n  \"firstName\": \"James\",\r\n  \"lastName\": \"Andres\",\r\n  \"createdOn\": \"2022-07-11T18:00:52.196Z\",\r\n  \"isActive\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44382/api/customers/create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"api",
+								"customers",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44382/api/customers/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"api",
+								"customers",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"userId\": \"71b659b1-de09-4c84-b0ab-3b35c6e3752e\",\r\n        \"username\": \"Jamest\",\r\n        \"email\": \"jamest@test.lk\",\r\n        \"firstName\": \"Jamest\",\r\n        \"lastName\": \"Andrest\",\r\n        \"createdOn\": \"2022-10-07T00:00:00\",\r\n        \"isActive\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44382/api/customers/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"api",
+								"customers",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44382/api/customers/delete?userId=3b3c9309-8fc7-4a72-a7fe-9a809319709c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"api",
+								"customers",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "3b3c9309-8fc7-4a72-a7fe-9a809319709c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "GetActiveOrdersByCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44382/api/orders/activeordersbycustomer?customerId=3fa85f54-5717-4562-b3fc-2c963f66afa7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"api",
+								"orders",
+								"activeordersbycustomer"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "3fa85f54-5717-4562-b3fc-2c963f66afa7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
